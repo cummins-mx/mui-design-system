@@ -2,7 +2,7 @@ import React from 'react';
 import RowRadioButtonsGroup from '../components/molecules/RadioButtonGroup';
 
 export default {
-  title: 'Molecules/RadioButtons',
+  title: 'Atoms/RadioButtons',
   component: RowRadioButtonsGroup,
 };
 

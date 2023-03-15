@@ -1,25 +1,30 @@
 import React from 'react';
 import BasicButton from '../components/atoms/Button';
+import { ThemeProvider } from '@emotion/react';
+import zeusTheme from '../themes/zeus';
+import { Button } from '@mui/material';
 
 export default {
   title: 'Atoms/Button',
   component: BasicButton,
 };
 
-const Template = (args) => <BasicButton {...args} />;
+const Template = (args) => <ThemeProvider theme={zeusTheme}><Button {...args}>Button Text</Button></ThemeProvider>;
 
-export const PrimaryButton = Template.bind({});
-PrimaryButton.args = {
-    variant: 'contained'
+export const ContainedButton = Template.bind({});
+ContainedButton.args = {
+    variant: "contained",
 };
 
-export const SecondaryButton = Template.bind({});
-SecondaryButton.args = {
-    vatiant: 'text'
+
+export const TextButton = Template.bind({});
+TextButton.args = {
+    variant: 'text',
 };
 
 export const OutlinedButton = Template.bind({});
 OutlinedButton.args = {
-    variant: 'outlined'
+    variant: 'outlined',
+    size: 'large',
     
-};
+}; 

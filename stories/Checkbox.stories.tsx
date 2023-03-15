@@ -1,14 +1,15 @@
 import React from 'react';
-import Checkboxes from '../components/atoms/Checkbox';
+import Checkbox from '@mui/material/Checkbox';
 
 export default {
-  title: 'Atoms/Checkboxes',
-  component: Checkboxes,
+  title: 'Atoms/Checkbox',
+  component: Checkbox,
 };
 
-const Template = (args) => <Checkboxes {...args} />;
+const Template = (args) => <Checkbox {...args} />;
 
-export const Checkboxes_ = Template.bind({});
-Checkboxes_.args = {
- 
+export const Checkbox_ = Template.bind({});
+Checkbox_.args = {
+  label: { inputProps: { 'aria-label': 'Checkbox demo' } },
+
 };

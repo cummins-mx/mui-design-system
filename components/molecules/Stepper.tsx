@@ -6,7 +6,7 @@ import StepButton from '@mui/material/StepButton';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad', 'step 4', 'step 5'];
 
 export default function HorizontalNonLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -66,7 +66,7 @@ export default function HorizontalNonLinearStepper() {
         {steps.map((label, index) => (
           <Step key={label} completed={completed[index]}>
             <StepButton color="inherit" onClick={handleStep(index)}>
-              {label}
+              {/* {label} */}
             </StepButton>
           </Step>
         ))}

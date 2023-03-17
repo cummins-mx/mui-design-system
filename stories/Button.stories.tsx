@@ -1,12 +1,11 @@
 import React from 'react';
-import BasicButton from '../components/atoms/Button';
 import { ThemeProvider } from '@emotion/react';
 import zeusTheme from '../themes/zeus';
 import { Button } from '@mui/material';
 
 export default {
-  title: 'Atoms/Button',
-  component: BasicButton,
+  title: 'Atoms/Buttons',
+  component: Button,
 };
 
 const Template = (args) => <ThemeProvider theme={zeusTheme}><Button {...args}>Button Text</Button></ThemeProvider>;

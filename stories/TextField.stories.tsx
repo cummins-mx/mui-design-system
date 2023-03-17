@@ -1,16 +1,16 @@
 import React from 'react';
-import BasicTextField from '../components/atoms/TextField';
+import { TextField } from '@mui/material';
+import { ThemeProvider } from '@emotion/react';
+import zeusTheme from '../themes/zeus';
 
 export default {
-  title: 'Atoms/BasicTextField',
-  component: BasicTextField,
+  title: 'Atoms/TextField',
+  component: TextField,
 };
 
-const Template = (args) => <BasicTextField {...args} id="field-id"/>;
+const Template = (args) => <ThemeProvider theme={zeusTheme}><TextField {...args} /></ThemeProvider>;
 
-export const BasicTextField_ = Template.bind({});
-BasicTextField_.args = {
- label: '',
- variant: 'outlined',
-
+export const TextField_ = Template.bind({});
+TextField_.args = {
+ variant: 'filled',
 };

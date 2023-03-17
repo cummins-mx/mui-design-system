@@ -20,6 +20,7 @@ export default function BasicSelect({ id, options, defaultText, ...args}) {
         value={value}
         onChange={handleChange}
         displayEmpty
+        variant={args.variant}
       >
       {defaultText && <MenuItem value="">{defaultText}</MenuItem>}
       {options.map((option)=>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import zeusTheme from '../themes/zeus';
-import ComboBox from '../components/atoms/Autocomplete';
 import { Autocomplete } from '@mui/material';
 import { TextField } from '@mui/material';
 
@@ -12,7 +11,7 @@ export default {
   component: Autocomplete,
 };
 
-const Template = (args) => <ThemeProvider theme={zeusTheme}><Autocomplete {...args} options={top100Films}   renderInput={(params) => <TextField {...params} label="Movie" />}/></ThemeProvider>;
+const Template = (args) => <ThemeProvider theme={zeusTheme}><Autocomplete {...args} options={top100Films}   renderInput={(params) => <TextField {...params} label="Optional Label" variant='filled' />}/></ThemeProvider>;
 
 export const Autocomplete_ = Template.bind({});
 Autocomplete_.args = {

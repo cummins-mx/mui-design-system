@@ -1,14 +1,22 @@
 import React from 'react';
-import SimplePaper from '../components/atoms/Paper';
+import { ThemeProvider } from '@emotion/react';
+import zeusTheme from '../themes/zeus';
+import { Paper } from '@mui/material';
 
 export default {
-  title: 'Atoms/Paper',
-  component: SimplePaper,
+  title: 'Atoms/Papers',
+  component: Paper,
 };
 
-const Template = (args) => <SimplePaper {...args} />;
+const Template = (args) => <ThemeProvider theme={zeusTheme} ><Paper {...args} /> </ThemeProvider>;
 
-export const Paper = Template.bind({});
-Paper.args = {
- 
+export const BasicPaper = Template.bind({});
+BasicPaper.args = {
+ sx: {width: '150px', height: '150px'}
+};
+
+export const OutlinedPaper = Template.bind({});
+OutlinedPaper.args = {
+ sx: {width: '150px', height: '150px'},
+ variant: 'outlined',
 };

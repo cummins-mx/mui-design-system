@@ -24,6 +24,5 @@ TextButton.args = {
 export const OutlinedButton = Template.bind({});
 OutlinedButton.args = {
     variant: 'outlined',
-    size: 'large',
-    
+    size: 'large', 
 }; 
